@@ -76,13 +76,27 @@ The processor will:
 
 ```
 transcript_dashboard_new/
-├── data/                    # Organized transcript files (not in repo)
-├── processed_data/          # Generated embeddings and metadata (not in repo)
-├── unsorted_files/         # Directory for files to be sorted (not in repo)
-├── docs/                   # Project documentation
+├── backend/                # Backend API and processing modules
+│   ├── api/               # FastAPI application
+│   ├── calculations/      # Analysis calculation modules
+│   ├── llm_calls/         # LLM integration for semantic analysis
+│   └── outputfile/        # Generated analysis outputs (JSON)
+├── frontend/              # Next.js dashboard application
+│   ├── src/               # Source code
+│   │   ├── app/           # Next.js app router pages
+│   │   ├── components/    # Reusable UI components
+│   │   └── lib/           # Utility libraries
+│   └── public/            # Static assets
+├── data/                  # Organized transcript files (not in repo)
+├── processed_data/        # Generated embeddings and metadata (not in repo)
+├── unsorted_files/       # Directory for files to be sorted (not in repo)
+├── docs/                 # Project documentation
+├── checkpoints/          # Development checkpoints and milestones
+├── old_file_references/  # Legacy processing scripts
 ├── incremental_processor.py # Script for processing transcripts
-├── sort_transcripts.py     # Script for organizing files
-└── requirements.txt        # Python dependencies
+├── sort_transcripts.py   # Script for organizing files
+├── data_explorer.py      # Data exploration utilities
+└── requirements.txt      # Python dependencies
 ```
 
 ## Dependencies
